@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tofaktorautentisering - 2fa.no</title>
+    <style>
+      * {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: #222;
+        max-width: 100%;
+        background-color: #f0f0f0;
+      }
+
+      body {
+        padding: 0.8em;
+        margin: 0 auto;
+        width: 70ch;
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 20px;
+        font-family: sans-serif;
+        line-height: 1.6;
+      }
+
+      .highlight {
+        margin-top: 2.4em;
+        margin-bottom: 2.4em;
+        border-radius: 4px;
+        padding: 0.4em 0.8em;
+        max-width: 100%;
+        background-color: #ffffcc;
+        border: 1px solid #dddd77;
+        font-weight: 700;
+      }
+
+      h1,
+      h2 {
+        word-wrap: break-word;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 1px solid black;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+      }
+
+      h2 {
+        margin: 2.4em 0 0.4em;
+      }
+
+      p {
+        margin: 1em auto 0;
+      }
+
+      a {
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tofaktorautentisering (2fa)</h1>
+    <p>
+      Du har sikkert hørt flere ganger at du bør aktivere to-faktor-autentisering (eller to-trinns-bekreftelse som det
+      også kalles). Med hva er det, og hvordan aktiverer man det? Det skal vi forsøke svare på i denne artikkelen.
+    </p>
+    <p>
+      Faktisk har du nok brukt to-faktor-autentisering allerede. BankID er det mest kjente eksemplet. For å logge inn
+      kreves det to ulike ting. Det krevet noe du vet (altså passordet ditt) og noe du har (altså passordkalkulator
+      eller mobiltelefon). Det er her navnet kommer fra, nemlig at det er to ulike faktorer som skal til, mot kun én
+      (passord) ellers. Et annet kjent eksempel på to-faktor-autentisering er MinID som blant annet benyttes for å logge
+      inn i AltInn. Her må du oppgi passord, samt en kode du får på SMS.
+    </p>
+    <h2>Hva er det godt for?</h2>
+    <p>
+      Hva er så hensikten med to-faktor-autentisering? Jo, svært mange blir frarøvet sitt passord. At man har et enkelt
+      og gjettbart passord er en mulighet. Vanligere er at det man benytter samme passord flere steder, og av den grunn
+      er det nok at ett av disse stedene røper det eller blir hacket for at passordet til “alt” er på avveie. Til slutt
+      er det også vanlig å sette opp falske nettsider som forsøker frarøve deg brukernavnet og passordet. Dette er
+      såkalt phishing. Ofte da ved at du først får en e-post med en link til nettsiden.
+    </p>
+    <p>
+      Siden det er nok at noen vet om passordet for å missbruke det, er du i trøbbel med en gang det blir avslørt.
+      Derfor er to-faktor-autentisering et ekstra “lag” med sikkerhet som gjør at det ikke er full krise dersom noen får
+      tak i din “hemmelighet”. De må nemlig da også få tak i noe du har, som ikke er like enkelt.
+    </p>
+    <p>
+      Det skal sies at den andre faktoren også kan være “noe du er”. Altså biometri slik som fingeravtrykk, iris,
+      stemme, ansiktsform osv. Dette er imidlertid mye mer komplisert å gjennomføre. I dag er derfor stort sett alltid
+      “noe du har” den andre faktoren i tillegg til “noe du vet”.
+    </p>
+    <p>
+      Vi kan sammenligne to-faktor-autentisering litt med en lås. En kode til en kodelås vil være “noe man vet”, en
+      nøkkel til en nøkkellås vil være “noe man har”. Selv om man sjelden ser noe slikt, så er to-faktor-autentisering
+      da en lås som både har kodehjul og et nøkkelhull. Begge må låses opp for å åpne låsen.
+    </p>
+    <p>
+      En kode kan andre se, eller prøve seg frem til, en nøkkel krever kopiering for å missbrukes. Også ulempene er de
+      samme: En kode kan man glemme, en nøkkel kan man miste.
+    </p>
+    <h2>Hvilke ulemper gir det?</h2>
+    <p>
+      En av ulempene med å aktivisere to-faktor-autentisering er at innloggingen blir noe mer tungvindt. Vi må da finne
+      frem mobilen eller passordkalkulatoren, og faktisk sørge for at vi har de med oss. Det blir også mye mer tungvindt
+      å la andre kunne logge inn som oss, eller dele innlogging, men det skal man uansett ALDRI gjøre allikevel, så
+      dette er ikke et reelt problem.
+    </p>
+    <p>
+      Det største problemet man bør være klar over er imidlertid at det kan bli problematisk om vi mister “det vi har”
+      som skal benyttes for å logge inn. Det er jo besittelsen av dette som gir oss adgang. Et typisk eksempel er om vi
+      ødelegger eller mister mobilen. Det kan også være at vi bytter mobil, og da må “flytte over” til den nye. Det er
+      derfor viktig at vi samtidig med at vi aktiverer to-faktor-autentisering også aktiverer en alternativ
+      backup-løsning som de fleste tilbyr.
+    </p>
+    <h2>Er det helt sikkert?</h2>
+    <p>
+      Svaret er nei. Selv om vi har aktivert to-faktor-autentisering er vi ikke helt sikre. Noen kan faktisk lage falske
+      nettsider som også får oss til å oppgi engangskoden samtidig med passordet. Det er litt for omfattende å gå i
+      detaljer her, men også BankID-mobil kan i teorien også svindles. Vi bør derfor alltid være på vakt.
+    </p>
+    <p>
+      Fordelen med to-faktor-autentisering er at svindlerne kun kan opptre som oss på den ene tjenesten det gjelder, og
+      kun én gang pr svindelforsøk (kodene er som regel unike og kun gyldig én gang)
+    </p>
+    <h2>Hvor kan jeg bruke det?</h2>
+    <p>
+      De aller fleste store tjenestene tilbyr i dag to-faktor-autentisering, men vi må selv aktivere det. Dette gjelder
+      f.eks. Google, Facebook, DropBox, PayPal osv. Vi skal gi noen korte veiledninger til ulike tjenester i resten av
+      denne artikkelen. Det kommer flere veiledninger etter hvert.
+    </p>
+    <p class="highlight">
+      Ønsker du å vite mer om to-faktor-autentisering, passord og innloggingssvindler? Da anbefaler vi boken
+      <a href="https://www.datasikkerhetsboka.no/">Datasikkerhet av Tom Heine Nätt og Christian F. Heide</a>.
+    </p>
+    <p>
+      Teksten på denne siden er hentet fra et blogginnlegg av Tom Heine Nätt:
+      <a href="https://www.datasikkerhetsboka.no/blogg/2016/08/04/to-faktor-autentisering/"
+        >https://www.datasikkerhetsboka.no/blogg/2016/08/04/to-faktor-autentisering/</a
+      >
+    </p>
+  </body>
+</html>
